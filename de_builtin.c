@@ -27,7 +27,12 @@ int _myexit(info_t *info)
 	info->err_num = -1;
 	return (-2);
 }
-
+/**
+ * _mycd - Change current working directory.
+ * @info: Pointer to the structure containing relevant information.
+ *
+ * Return: Always returns 0.
+ */
 int _mycd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
@@ -71,7 +76,12 @@ int _mycd(info_t *info)
 	}
 	return (0);
 }
-
+/**
+ * _myhelp - Display help information (Not yet implemented).
+ * @info: Pointer to the structure containing relevant information.
+ *
+ * Return: Always returns 0.
+ */
 int _myhelp(info_t *info)
 {
 	char **arg_array;
