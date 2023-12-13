@@ -12,7 +12,12 @@ int _myenv(info_t *info)
 	return (0);
 }
 
-
+/**
+ * _getenv - Retrieves the value of an environment variable .
+ * @info: Pointer to the structure containing relevant information.
+ * @name: The name of the environment variable to be retrieved.
+ * Return: Returns a pointer to the value 
+ */
 char *_getenv(info_t *info, const char *name)
 {
 	list_t *node = info->env;
@@ -28,7 +33,12 @@ char *_getenv(info_t *info, const char *name)
 	return (NULL);
 }
 
-
+/**
+ * _mysetenv - Set or update environment variable.
+ * @info: Pointer to the structure containing relevant information.
+ *
+ * Return: Returns 1 on success, 0 on failure.
+ */
 int _mysetenv(info_t *info)
 {
 	if (info->argc != 3)
@@ -40,7 +50,12 @@ int _mysetenv(info_t *info)
 		return (0);
 	return (1);
 }
-
+/**
+ * _myunsetenv - Remove specified environment variables.
+ * @info: Pointer to the structure containing relevant information.
+ *
+ * Return: Returns 0 on success, 1 on failure.
+ */
 
 int _myunsetenv(info_t *info)
 {
@@ -57,7 +72,12 @@ int _myunsetenv(info_t *info)
 	return (0);
 }
 
-
+/**
+ * populate_env_list - Populate linked list with environment variables.
+ * @info: Pointer to the structure containing relevant information.
+ *
+ * Return: Always returns 0.
+ */
 int populate_env_list(info_t *info)
 {
 	list_t *node = NULL;
