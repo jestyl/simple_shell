@@ -15,6 +15,17 @@ char *_memset(char *s, char b, unsigned int n)
 		s[i] = b;
 	return (s);
 }
+/*
+ * Function: ffree
+ * ----------------
+ * Description: This function is responsible for freeing up memory allocated
+ *              using a custom memory management scheme 
+ *
+ * Parameters:
+ *   - memory_block: A pointer to the memory block that needs to be freed.
+ *
+ * Returns: void
+ */
 
 void ffree(char **pp)
 {
@@ -26,7 +37,11 @@ void ffree(char **pp)
 		free(*pp++);
 	free(a);
 }
-
+/*
+ * _realloc: Resizes a dynamically allocated memory block.
+ * Parameters: ptr - Pointer to the memory block.
+ * Returns: New pointer on success, NULL on failure or if new_size is zero.
+ */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
