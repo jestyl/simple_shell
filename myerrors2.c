@@ -27,7 +27,11 @@ int _erratoi(char *s)
 	return (result);
 }
 
-
+/**
+ * print_error - Prints an error message to error stream.
+ * @info: Pointer to the structure 
+ * @estr: The error message to be printed.
+ */
 void print_error(info_t *info, char *estr)
 {
 	_eputs(info->fname);
@@ -39,7 +43,12 @@ void print_error(info_t *info, char *estr)
 	_eputs(estr);
 }
 
-
+/**
+ * print_d - Prints an integer to file descriptor.
+ * @input: The integer to be printed.
+ * @fd: The file descriptor to write to.
+ * Return: Returns the number of characters printed.
+ */
 int print_d(int input, int fd)
 {
 	int (*__putchar)(char) = _putchar;
@@ -72,7 +81,13 @@ int print_d(int input, int fd)
 	return (count);
 }
 
-
+/**
+ * convert_number - Converts a number to a specified base.
+ * @num: The number to be converted.
+ * @base: The base for conversion.
+ * @flags: Flags indicating conversion options.
+ * Return: Returns a pointer 
+ */
 char *convert_number(long int num, int base, int flags)
 {
 	static char *array;
@@ -101,7 +116,10 @@ char *convert_number(long int num, int base, int flags)
 	return (ptr);
 }
 
-
+/**
+ * remove_comments - Removes comments from a string 
+ * @buf: The string to remove comments from.
+ */
 void remove_comments(char *buf)
 {
 	int i;
