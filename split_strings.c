@@ -48,7 +48,15 @@ char **strtow(char *str, char *d)
 	return (s);
 }
 
-
+/**
+ * strtow2 - Splits a string into words using a specified delimiter.
+ * @str: The input string to be split.
+ * @d: The delimiter character.
+ *
+ * Return: Returns a double pointer to an array of strings.
+ *         Each string represents a word from the input string.
+ *         Returns NULL on failure or if the input string is empty.
+ */
 char **strtow2(char *str, char d)
 {
 	int i, j, k, m, numwords = 0;
