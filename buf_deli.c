@@ -70,6 +70,8 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 /**
  * replace_alias - Replaces the first argument
  * @info: Pointer to the info_t structure
+ *
+ * Return: 1 , otherwise 0
  */
 int replace_alias(info_t *info)
 {
