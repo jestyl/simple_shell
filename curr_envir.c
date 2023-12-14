@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * myenv - Displays the current environment.
- * @info: Structure containing potential arguments, ensuring a consistent function
- *          constant function prototype.
+ * _myenv - Displays the current environment.
+ * @info: info structure
+ *
  * Return: Always 0
  */
 int _myenv(info_t *info)
@@ -16,7 +16,7 @@ int _myenv(info_t *info)
  * _getenv - Retrieves the value of an environment variable .
  * @info: Pointer to the structure containing relevant information.
  * @name: The name of the environment variable to be retrieved.
- * Return: Returns a pointer to the value 
+ * Return: Returns a pointer to the value
  */
 char *_getenv(info_t *info, const char *name)
 {

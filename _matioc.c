@@ -1,22 +1,22 @@
 #include "shell.h"
 
 /**
-*interactive - checks if the shell is in interactive mode
-*@info: structure containing address information
-*Returns: 1 if in interactive mode, 0 otherwise
-*/
+ * interactive - Checks if the shell is running in interactive mode
+ * @info: Pointer to the info_t structure containing relevant information
+ *
+ * Return: 1 if running in interactive mode, 0 otherwise.
+ */
 int interactive(info_t *info)
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
 }
-
 /**
- * is_delim - checks if character is a delimeter
- * @c: the char to check
- * @delim: the delimeter string
- * Return: 1 if true, 0 if false
+ * is_delim - Checks if a character is a delimiter.
+ * @c: Character to be checked.
+ * @delim: String containing delimiters.
+ *
+ * Return: 1 if the character is a delimiter, 0 otherwise
  */
-
 int is_delim(char c, char *delim)
 {
 	while (*delim)
@@ -25,23 +25,16 @@ int is_delim(char c, char *delim)
 	return (0);
 }
 
-/**
- *_isalpha - checks for alphabetic character
- *@c: The character to input
- *Return: 1 if c is alphabetic, 0 otherwise
- */
-int _isalpha(int c)
-{
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);
 }
-
 /**
- *_atoi - converts a string to an integer
- *@s: the string to be converted
- *Return: 0 if no numbers in string, converted number otherwise
+ * _atoi - Converts a string to an integer.
+ * @s: String to be converted.
+ *
+ * Return: The converted integer value.
  */
 int _atoi(char *s)
 {

@@ -1,11 +1,12 @@
 #include "shell.h"
-
 /**
- **_memset - Populates a memory area pointed by s with a specified constant byte.
- *@s: Pointer to the memory area.
- *@b: The byte used to fill the memory.
- *@n: The number of bytes to be filled.
- *Return: (s) a pointer to the memory area s
+ * _memset - Fills the first n bytes of the memory area pointed to by s
+ * with the constant byte b.
+ * @s: Pointer to the memory area.
+ * @b: Byte to fill the memory area with.
+ * @n: Number of bytes to fill.
+ *
+ * Return: Pointer to the memory area s.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -15,18 +16,10 @@ char *_memset(char *s, char b, unsigned int n)
 		s[i] = b;
 	return (s);
 }
-/*
- * Function: ffree
- * ----------------
- * Description: This function is responsible for freeing up memory allocated
- *              using a custom memory management scheme 
- *
- * Parameters:
- *   - memory_block: A pointer to the memory block that needs to be freed.
- *
- * Returns: void
+/**
+ * ffree - Frees a double pointer and sets it to NULL.
+ * @pp: Pointer to the double pointer to be freed
  */
-
 void ffree(char **pp)
 {
 	char **a = pp;
@@ -37,12 +30,14 @@ void ffree(char **pp)
 		free(*pp++);
 	free(a);
 }
-/*
- * _realloc: Resizes a dynamically allocated memory block.
- * Parameters: ptr - Pointer to the memory block.
- * Returns: New pointer on success, NULL on failure or if new_size is zero.
+/**
+ * _realloc - Reallocates a memory block using malloc and frees the old block.
+ * @ptr: Pointer to the old memory block.
+ * @old_size: Size of the old memory block.
+ * @new_size: Size of the new memory block.
+ *
+ * Return: Pointer to the newly allocated memory block.
  */
-
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *p;

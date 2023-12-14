@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * _erratoi - Converts a string to an integer.
+ * _erratoi - Converts a string to an integer
  * @s: The string to be converted.
- * Return: If the string contains no numbers, returns 0; otherwise, returns the converted number.
+ * Return: 0
  */
 int _erratoi(char *s)
 {
@@ -11,7 +11,7 @@ int _erratoi(char *s)
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		s++;  
+		s++;
 	for (i = 0;  s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
@@ -29,7 +29,7 @@ int _erratoi(char *s)
 
 /**
  * print_error - Prints an error message to error stream.
- * @info: Pointer to the structure 
+ * @info: Pointer to the structure
  * @estr: The error message to be printed.
  */
 void print_error(info_t *info, char *estr)
@@ -86,7 +86,7 @@ int print_d(int input, int fd)
  * @num: The number to be converted.
  * @base: The base for conversion.
  * @flags: Flags indicating conversion options.
- * Return: Returns a pointer 
+ * Return: Returns a pointer
  */
 char *convert_number(long int num, int base, int flags)
 {
@@ -117,7 +117,7 @@ char *convert_number(long int num, int base, int flags)
 }
 
 /**
- * remove_comments - Removes comments from a string 
+ * remove_comments - Removes comments from a string
  * @buf: The string to remove comments from.
  */
 void remove_comments(char *buf)

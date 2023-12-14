@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- * is_chain - Checks if the current character in the buffer is a chain delimiter.
+ * is_chain - Checks if buffer is a chain delimiter
+ *
  * @info: the parameter structure
  * @buf: the character buffer
  * @p: The address of the current position in buf.
@@ -24,9 +25,9 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		j++;
 		info->cmd_buf_type = CMD_AND;
 	}
-	else if (buf[j] == ';') /* found end of this command */
+	else if (buf[j] == ';')
 	{
-		buf[j] = 0; /* replace semicolon with null */
+		buf[j] = 0;
 		info->cmd_buf_type = CMD_CHAIN;
 	}
 	else
@@ -34,7 +35,15 @@ int is_chain(info_t *info, char *buf, size_t *p)
 	*p = j;
 	return (1);
 }
-
+/**
+ * check_chain - Checks and modifies the command buffer
+ *
+ * @info: Pointer to the info_t structure
+ * @buf: Buffer
+ * @p: Pointer to the current index
+ * @i: Index of the current character
+ * @len: Length of the buffer.
+ */
 void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 {
 	size_t j = *p;
@@ -58,7 +67,10 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 
 	*p = j;
 }
-
+/**
+ * replace_alias - Replaces the first argument
+ * @info: Pointer to the info_t structure
+ */
 int replace_alias(info_t *info)
 {
 	int i;
@@ -81,7 +93,13 @@ int replace_alias(info_t *info)
 	}
 	return (1);
 }
-
+/**
+ * replace_vars - Replaces certain variables in an array of strings
+ *
+ * @info: Pointer to the info_t structure
+ *
+ * Return: 0 if success
+ */
 int replace_vars(info_t *info)
 {
 	int i = 0;
@@ -116,7 +134,14 @@ int replace_vars(info_t *info)
 	}
 	return (0);
 }
-
+/**
+ * replace_string - Replaces a string with a new one
+ *
+ * @old: Pointer to the old string to be replaced.
+ * @new: Pointer to the new string.
+ *
+ * Return: 1 on success.
+ */
 int replace_string(char **old, char *new)
 {
 	free(*old);

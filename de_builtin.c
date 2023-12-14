@@ -1,16 +1,15 @@
 #include "shell.h"
 
 /**
-
-_myexit - Exits the shell
-@info: Structure containing potential arguments, ensuring a consistent function prototype.
-Return: Exits with a specified exit status (0) if info.argv[0] is not equal to "exit".
-*/
+ * _myexit - Exits the shell
+ * @info: info structure
+ * Return: Exits with a specified exit status (0)
+ */
 int _myexit(info_t *info)
 {
 	int exitcheck;
 
-	if (info->argv[1])  
+	if (info->argv[1])
 	{
 		exitcheck = _erratoi(info->argv[1]);
 		if (exitcheck == -1)
