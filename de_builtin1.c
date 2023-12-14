@@ -12,7 +12,13 @@ int _myhistory(info_t *info)
 	return (0);
 }
 
-
+/**
+ * unset_alias - Unset an alias in the shell.
+ * @info: Pointer to the structure containing relevant information.
+ * @str: The alias string to unset.
+ *
+ * Return: Returns 1 on failure, 0 on success.
+ */
 int unset_alias(info_t *info, char *str)
 {
 	char *p, c;
@@ -29,7 +35,13 @@ int unset_alias(info_t *info, char *str)
 	return (ret);
 }
 
-
+/**
+ * set_alias - Set or update an alias in the shell.
+ * @info: Pointer to the structure containing relevant information.
+ * @str: The alias string to set or update.
+ *
+ * Return: Returns 1 on failure, 0 on success.
+ */
 int set_alias(info_t *info, char *str)
 {
 	char *p;
@@ -43,7 +55,12 @@ int set_alias(info_t *info, char *str)
 	unset_alias(info, str);
 	return (add_node_end(&(info->alias), str, 0) == NULL);
 }
-
+/**
+ * print_alias - Print the contents of an alias node.
+ * @node: The node containing the alias information.
+ *
+ * Return: Returns 0 on success, 1 if the node is NULL.
+ */
 
 int print_alias(list_t *node)
 {
@@ -61,7 +78,12 @@ int print_alias(list_t *node)
 	}
 	return (1);
 }
-
+/**
+ * _myalias - Display or set shell aliases.
+ * @info: Pointer to the structure containing relevant information.
+ *
+ * Return: Always returns 0.
+ */
 
 int _myalias(info_t *info)
 {
