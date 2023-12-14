@@ -21,7 +21,12 @@ char *_strcpy(char *dest, char *src)
 	dest[i] = 0;
 	return (dest);
 }
-
+/**
+ * _strdup - Duplicates a string.
+ * @str: The string to be duplicated.
+ *
+ * Return: Returns a pointer 
+ */
 char *_strdup(const char *str)
 {
 	int length = 0;
@@ -38,7 +43,10 @@ char *_strdup(const char *str)
 		ret[length] = *--str;
 	return (ret);
 }
-
+/**
+ * _puts - Prints a string to the standard output.
+ * @str: The string to be printed.
+ */
 void _puts(char *str)
 {
 	int i = 0;
@@ -51,7 +59,12 @@ void _puts(char *str)
 		i++;
 	}
 }
-
+/**
+ * _putchar - Writes a character to the standard output.
+ * @c: The character to be written.
+ *
+ * Return: Returns 1 on success.
+ */
 int _putchar(char c)
 {
 	static int i;
