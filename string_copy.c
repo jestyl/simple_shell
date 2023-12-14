@@ -25,7 +25,7 @@ char *_strcpy(char *dest, char *src)
  * _strdup - Duplicates a string.
  * @str: The string to be duplicated.
  *
- * Return: Returns a pointer 
+ * Return: Returns a pointer
  */
 char *_strdup(const char *str)
 {

@@ -1,10 +1,11 @@
 #include "shell.h"
 
 /**
- * _myhistory - Displays the history list, presenting each command with line numbers
- *              starting at 0.
- * @info: Structure containing potential arguments, ensuring a constant function prototype.
-    Return: Always returns 0.
+ * _myhistory - Displays the history
+ *
+ * @info: info structure
+ *
+ * Return: Always returns 0
  */
 int _myhistory(info_t *info)
 {

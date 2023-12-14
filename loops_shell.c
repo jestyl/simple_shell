@@ -72,8 +72,8 @@ int find_builtin(info_t *info)
 	return (built_in_ret);
 }
 /**
- * find_cmd - Locate and execute the specified command.
- * @info: Pointer to the structure 
+ * find_cmd - Locate and execute the specified command
+ * @info: Pointer to the structure
  */
 void find_cmd(info_t *info)
 {
@@ -113,7 +113,7 @@ void find_cmd(info_t *info)
 
 /**
  * fork_cmd - Forks a child process.
- * @info: Pointer to the structure 
+ * @info: Pointer to the structure
  */
 void fork_cmd(info_t *info)
 {
@@ -122,7 +122,7 @@ void fork_cmd(info_t *info)
 	child_pid = fork();
 	if (child_pid == -1)
 	{
-	
+
 		perror("Error:");
 		return;
 	}
@@ -135,7 +135,7 @@ void fork_cmd(info_t *info)
 				exit(126);
 			exit(1);
 		}
-		
+
 	}
 	else
 	{

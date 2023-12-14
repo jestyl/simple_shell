@@ -23,8 +23,7 @@ int _strlen(char *s)
  * @s1: The first string for comparison.
  * @s2: The second string for comparison.
  *
- * Return: Returns an integer less than, equal to, or greater than zero
- *         if s1 is found to be less than, equal to, or greater than s2, respectively.
+ * Return: Returns an integer
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -44,7 +43,7 @@ int _strcmp(char *s1, char *s2)
  * starts_with - Checks if a string starts with a specified prefix.
  * @haystack: The string to check.
  * @needle: The prefix to look for.
- * Return: Returns a pointer 
+ * Return: a pointer
  */
 char *starts_with(const char *haystack, const char *needle)
 {

@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- *__eputs - Prints the specified input string.
+ * _eputs - Prints the specified input string.
  * @str: the string to be printed
  *
  * Return: No explicit return value.
@@ -20,8 +20,8 @@ void _eputs(char *str)
 }
 
 /**
- * _eputchar - Writes a character 
- * @c: The character to be written.
+ * _eputchar - Writes a character
+ * @c: The character to be written
  * Return: Returns 1 on success.
  */
 int _eputchar(char c)
