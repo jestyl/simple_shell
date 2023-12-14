@@ -19,7 +19,11 @@ void _eputs(char *str)
 	}
 }
 
-
+/**
+ * _eputchar - Writes a character 
+ * @c: The character to be written.
+ * Return: Returns 1 on success.
+ */
 int _eputchar(char c)
 {
 static int i;
@@ -34,7 +38,12 @@ static int i;
 		buf[i++] = c;
 	return (1);
 }
-
+/**
+ * _putfd - Writes a character to file descriptor.
+ * @c: The character to be written.
+ * @fd: The file descriptor to write to.
+ * Return: Returns 1 on success.
+ */
 
 int _putfd(char c, int fd)
 {
@@ -51,6 +60,13 @@ int _putfd(char c, int fd)
 	return (1);
 }
 
+/**
+ * _putsfd - Writes a string to file descriptor.
+ * @str: The string to be written.
+ * @fd: The file descriptor to write to.
+ *
+ * Return: Returns the number of characters written.
+ */
 
 int _putsfd(char *str, int fd)
 {
