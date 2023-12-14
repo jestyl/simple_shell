@@ -30,7 +30,13 @@ char *_strncpy(char *dest, char *src, int n)
 	return (s);
 }
 
-
+/**
+ * _strncat - Concatenates n characters 
+ * @dest: The destination string.
+ * @src: The source string to be appended.
+ * @n: The maximum number of characters to append.
+ * Return: Returns a pointer to the concatenated string (dest).
+ */
 char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
@@ -50,7 +56,13 @@ char *_strncat(char *dest, char *src, int n)
 		dest[i] = '\0';
 	return (s);
 }
-
+/**
+ * _strchr - Locates occurrence of a character 
+ * @s: The string to search.
+ * @c: The character to locate.
+ *
+ * Return: Returns a pointer 
+ */
 
 char *_strchr(char *s, char c)
 {
