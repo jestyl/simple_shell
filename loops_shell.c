@@ -42,7 +42,11 @@ int hsh(info_t *info, char **av)
 	}
 	return (builtin_ret);
 }
-
+/**
+ * find_builtin - Search for and execute command.
+ * @info: Pointer to the structure .
+ * Return: Returns the result or -1 .
+ */
 int find_builtin(info_t *info)
 {
 	int i, built_in_ret = -1;
@@ -67,7 +71,10 @@ int find_builtin(info_t *info)
 		}
 	return (built_in_ret);
 }
-
+/**
+ * find_cmd - Locate and execute the specified command.
+ * @info: Pointer to the structure 
+ */
 void find_cmd(info_t *info)
 {
 	char *path = NULL;
@@ -104,7 +111,10 @@ void find_cmd(info_t *info)
 	}
 }
 
-
+/**
+ * fork_cmd - Forks a child process.
+ * @info: Pointer to the structure 
+ */
 void fork_cmd(info_t *info)
 {
 	pid_t child_pid;
